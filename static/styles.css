@@ -1,0 +1,69 @@
+#nfl_intro {
+    font-size: 1.2rem;
+}
+
+
+th, td{
+    text-align: center;
+}
+
+th {
+    font-weight: normal;
+}
+
+h6 {
+    font-weight: bold;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+#table1, #table2 {
+    /*margin: 1px;*/
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+#afc_standings {
+    padding: none;
+}
+
+#nfc_standings {
+    padding: none;
+}
+
+#match_up{
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+
+#bracket {
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+}
+
+#playoffs {
+    width: 80%
+}
+
+#nfl_logo {
+    width: 60%
+}
+
+#container{
+    text-align: center;
+}
+
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    width: 80%;
+}

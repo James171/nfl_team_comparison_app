@@ -1,0 +1,248 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<!-- <div>
+  <script async src="https://cse.google.com/cse.js?cx=005228361672214941118:dje7fpijctb"></script>
+  <div class="gcse-search"></div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div id="table1" class="table-responsive col-5 table-dark"><h3>{{team_stats_1['alias']}} {{team_stats_1['name']}}</h3>
+      <table class="table">
+        <h6>Team Rushing</h6>
+            <thead>
+              <tr>
+                <th scope="col">Yards</th>
+                <th scope="col">Avg_yards per Carry</th>
+                <th scope="col">Touchdowns</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_1['record']['rushing']['yards']}}</td>
+                  <td>{{team_stats_1['record']['rushing']['avg_yards']}}</td>
+                  <td>{{team_stats_1['record']['rushing']['touchdowns']}}</td>
+            </tbody>
+        </table>
+        <table class="table">
+            <h6>Team Passing</h6>
+            <thead>
+              <tr>
+                <th scope="col">Yards</th>
+                <th scope="col">Avg_yards per Att</th>
+                <th scope="col">Comp Pct%</th>
+                <th scope="col">TD</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Sacked</th>
+                <th scope="col">INT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_1['record']['passing']['yards']}}</td>
+                  <td>{{team_stats_1['record']['passing']['avg_yards']}}</td>
+                  <td>{{team_stats_1['record']['passing']['cmp_pct']}}</td>
+                  <td>{{team_stats_1['record']['passing']['touchdowns']}}</td>
+                  <td>{{team_stats_1['record']['passing']['rating']}}</td>
+                  <td>{{team_stats_1['record']['passing']['sacks']}}</td>
+                  <td>{{team_stats_1['record']['passing']['interceptions']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      <table class="table">
+            <h6>Total Team Penalties</h6>
+            <thead>
+              <tr>
+                <th scope="col">Penalties</th>
+                <th scope="col">Yards</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_1['record']['penalties']['penalties']}}</td>
+                  <td>{{team_stats_1['record']['penalties']['yards']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      <table class="table">
+            <h6>Field Goals</h6>
+            <thead>
+              <tr>
+                <th scope="col">Made</th>
+                <th scope="col">Attempts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+                  <td>{{team_stats_1['record']['field_goals']['made']}}</attemptsd>
+                  <td>{{team_stats_1['record']['field_goals']['attempts']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      <table class="table">
+            <h6>Efficiency</h6>
+            <thead>
+              <tr>
+                <th scope="col">Thirdown</th>
+                <th scope="col">Redzone</th>
+                <th scope="col">Goal-To-Go</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_1['record']['efficiency']['thirddown']['pct']}}</td>
+                  <td>{{team_stats_1['record']['efficiency']['redzone']['pct']}}</td>
+                  <td>{{team_stats_1['record']['efficiency']['goaltogo']['pct']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      <table class="table">
+            <h6>Defense</h6>
+            <thead>
+              <tr>
+                <th scope="col">Hurries</th>
+                <th scope="col">QB Hits</th>
+                <th scope="col">Sacks</th>
+                <th scope="col">Ints</th>
+                <th scope="col">Forced Fumble</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_1['record']['defense']['hurries']}}</td>
+                  <td>{{team_stats_1['record']['defense']['qb_hits']}}</td>
+                  <td>{{team_stats_1['record']['defense']['sacks']}}</td>
+                  <td>{{team_stats_1['record']['defense']['interceptions']}}</td>
+                  <td>{{team_stats_1['record']['defense']['forced_fumbles']}}</td>
+              </tr>
+            </tbody>
+      </table>
+    </div>
+    <div id="table2" class="table-responsive col-5 table-dark"><h3>{{team_stats_2['alias']}} {{team_stats_2['name']}}</h3>
+      <table class="table">
+        <h6>Team Rushing</h6>
+            <thead>
+              <tr>
+                <th scope="col">Yards</th>
+                <th scope="col">Avg_yards per Carry</th>
+                <th scope="col">Touchdowns</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_2['record']['rushing']['yards']}}</td>
+                  <td>{{team_stats_2['record']['rushing']['avg_yards']}}</td>
+                  <td>{{team_stats_2['record']['rushing']['touchdowns']}}</td>
+            </tbody>
+        </table>
+        <table class="table">
+            <h6>Team Passing</h6>
+            <thead>
+              <tr>
+                <th scope="col">Yards</th>
+                <th scope="col">Avg_yards per Att</th>
+                <th scope="col">Comp Pct%</th>
+                <th scope="col">TD</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Sacked</th>
+                <th scope="col">INT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_2['record']['passing']['yards']}}</td>
+                  <td>{{team_stats_2['record']['passing']['avg_yards']}}</td>
+                  <td>{{team_stats_2['record']['passing']['cmp_pct']}}</td>
+                  <td>{{team_stats_2['record']['passing']['touchdowns']}}</td>
+                  <td>{{team_stats_2['record']['passing']['rating']}}</td>
+                  <td>{{team_stats_2['record']['passing']['sacks']}}</td>
+                  <td>{{team_stats_2['record']['passing']['interceptions']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      <table class="table">
+            <h6>Total Team Penalties</h6>
+            <thead>
+              <tr>
+                <th scope="col">Penalties</th>
+                <th scope="col">Yards</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_2['record']['penalties']['penalties']}}</td>
+                  <td>{{team_stats_2['record']['penalties']['yards']}}</td>
+              </tr>
+            </tbody>
+      </table> 
+      <table class="table">
+            <h6>Field Goals</h6>
+            <thead>
+              <tr>
+                <th scope="col">Made</th>
+                <th scope="col">Attempts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+                  <td>{{team_stats_2['record']['field_goals']['made']}}</attemptsd>
+                  <td>{{team_stats_2['record']['field_goals']['attempts']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      <table class="table">
+            <h6>Efficiency</h6>
+            <thead>
+              <tr>
+                <th scope="col">Thirdown</th>
+                <th scope="col">Redzone</th>
+                <th scope="col">Goal-To-Go</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_2['record']['efficiency']['thirddown']['pct']}}</td>
+                  <td>{{team_stats_2['record']['efficiency']['redzone']['pct']}}</td>
+                  <td>{{team_stats_2['record']['efficiency']['goaltogo']['pct']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      <table class="table">
+            <h6>Defense</h6>
+            <thead>
+              <tr>
+                <th scope="col">Hurries</th>
+                <th scope="col">QB Hits</th>
+                <th scope="col">Sacks</th>
+                <th scope="col">Ints</th>
+                <th scope="col">Forced Fumble</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>{{team_stats_2['record']['defense']['hurries']}}</td>
+                  <td>{{team_stats_2['record']['defense']['qb_hits']}}</td>
+                  <td>{{team_stats_2['record']['defense']['sacks']}}</td>
+                  <td>{{team_stats_2['record']['defense']['interceptions']}}</td>
+                  <td>{{team_stats_2['record']['defense']['forced_fumbles']}}</td>
+              </tr>
+            </tbody>
+      </table>
+      </div>
+  </div>
+</div>
+<div>
+   
+</div>
+
+<div id="container">
+  <canvas id="canvas"></canvas>
+</div>
+
+<!-- <script> var jlist1 = JSON.parse("{{ list1 }}"); </script>   -->
+<script> var jlist1 = {{ list1|tojson }}; </script>
+<script> var jlist2 = {{ list2|tojson }}; </script>
+<script src="../static/my.js"></script>
+  
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <!--<form action="/match_up" method="post">-->
+    <!--    <div class="form-group">-->
+    <!--        <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Stock Symbol" type="text">-->
+    <!--    </div>-->
+    <!--    <button class="btn btn-primary" type="submit">Get Quote</button>-->
+    <!--</form>-->
+    <div id="match_up">
+        <form action="/match_up" method="POST">
+            <div class="form-group">
+                <select name="team_1" id="team_1">
+                    <option value="">--Please select a Team--</option>
+                    {% for key, value in data.items() %}
+
+                    <option value={{key}}>{{value}}</option>
+
+                    {% endfor %}
+
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="team_2" id="team_2">
+                    <option value="">--Please select a Team--</option>
+                    {% for key, value in data.items() %}
+
+                    <option value={{key}}>{{value}}</option>
+                    
+                    {% endfor %}
+
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Who will win</button>
+        </form>
+    </div>
+    <div id=bracket>
+        <img id="playoffs" src="/static/nfl_bracket.jpg">
+    </div>
+
+    <div class="container">
+        <div class="row" id="standings">
+            <div id="afc_standings" class="col-5">
+                    <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=pfr&url=%2Fyears%2F2019%2F&div=div_afc_playoff_standings&del_col=5,6"></script>
+            </div>
+            <div id="nfc_standings" class="col-5">
+                    <script type="text/javascript" src="//widgets.sports-reference.com/wg.fcgi?css=1&site=pfr&url=%2Fyears%2F2019%2F&div=div_nfc_playoff_standings&del_col=5,6"></script>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

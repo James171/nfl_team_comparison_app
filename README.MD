@@ -9,7 +9,7 @@ At the Home screen users will get some brief insight as to why people are so con
 ![](static/Home_Screen.png)
 
 
-User will then be promptet to input 2 teams to compare - Along with have a insight to team records through a profootball reference script
+User will then be prompted to input 2 teams to compare - Along with having insight to team records through a profootball reference script
 
 ![](static/prompt_for_teams.png)
 

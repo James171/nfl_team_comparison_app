@@ -7,8 +7,7 @@ from functools import wraps
 
 # Hide API Key from viewers
 api_key = os.environ['API_KEY']
-
-
+ 
 
 # Lookup function to to get hierarchy api information and team ID
 def lookup(symbol):
